@@ -51,8 +51,10 @@ void AirQuality::setAbsoluteHumidity(double absoluteHumid) {
 ostream& operator << (ostream& osObject,const AirQuality& quality1){
     osObject<<quality1.time<<" "<<quality1.date<<" "<<quality1.temperature<<" "
     <<quality1.relativeHumidity<<" "<<quality1.absoluteHumidity;
+    return osObject;
 }
 istream& operator >>(istream& isObject, AirQuality& quality1){
     isObject>>quality1.time>>quality1.date>>quality1.temperature
     >>quality1.relativeHumidity>>quality1.absoluteHumidity;
+    return isObject;
 }

@@ -57,7 +57,9 @@ bool Date::operator!=(const Date& otherDate)const{
 
 ostream& operator << (ostream& osObject,const Date& date1){
     osObject<<date1.years<<"/"<<date1.months<<"/"<<date1.days;
+    return osObject;
 }
 istream& operator >>(istream& isObject, Date& date1){
     isObject>>date1.years>>date1.months>>date1.days;
+    return isObject;
 }
